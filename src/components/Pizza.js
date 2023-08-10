@@ -1,8 +1,6 @@
 import React from "react";
 
-function Pizza({id, topping, size, vegetarian, setFormPizza}) {
-
-
+function Pizza({id, topping, size, vegetarian, pizza, handleChoosePizza}) {
 
   return (
     <tr>
@@ -10,7 +8,7 @@ function Pizza({id, topping, size, vegetarian, setFormPizza}) {
       <td>{size}</td>
       <td>{vegetarian ? "Yes" : "No"}</td>
       <td>
-        <button onClick={() => {null}} type="button" className="btn btn-primary">
+        <button onClick={() => handleChoosePizza(pizza)} type="button" className="btn btn-primary">
           Edit Pizza
         </button>
       </td>

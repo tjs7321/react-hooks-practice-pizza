@@ -1,7 +1,7 @@
 import React from "react";
 import Pizza from "./Pizza";
 
-function PizzaList({allPizzas, setFormPizza}) {
+function PizzaList({allPizzas, handleChoosePizza}) {
 
 
   return (
@@ -19,7 +19,8 @@ function PizzaList({allPizzas, setFormPizza}) {
           <Pizza
           key={pizza.id}
           {...pizza}
-          setFormPizza={setFormPizza}
+          handleChoosePizza={handleChoosePizza}
+          pizza={pizza}
           />
         ))}
       </tbody>
